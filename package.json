@@ -17,6 +17,7 @@
 		"gulp-autoprefixer": "^7.0.1",
 		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
+		"gulp-cssmin": "^0.2.0",
 		"gulp-file-include": "^2.3.0",
 		"gulp-fonter": "^0.3.0",
 		"gulp-group-css-media-queries": "^1.2.2",
@@ -29,7 +30,8 @@
 		"gulp-webp-html": "^1.0.2",
 		"gulp-webpcss": "^1.1.1",
 		"jquery": "^3.6.0",
-		"normalize.css": "^8.0.1"
+		"normalize.css": "^8.0.1",
+		"swiper": "^6.5.0"
 	},
 	"dependencies": {
 		"webp-converter": "2.2.3"

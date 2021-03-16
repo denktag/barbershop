@@ -7,3 +7,22 @@ html {
 *::before {
   box-sizing: inherit;
 }
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+.container {
+	@include container(1230px);
+}
+
+
+.text-yellow {
+  color: $yellow;
+}
+

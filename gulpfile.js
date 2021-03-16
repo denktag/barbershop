@@ -16,6 +16,7 @@ const webp = require('gulp-webp');
 const webphtml = require('gulp-webp-html');
 const webpcss = require('gulp-webpcss');
 const fonter = require('gulp-fonter');
+const cssmin = require('gulp-cssmin');
 let fs = require('fs');
 
 //Подключаем автообновление браузера ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,11 +77,16 @@ function scripts() {
 //Собираем все css файлы подключаемых плагинов, конкатинируем их в 1 минифицированный файл css и закидываем его в папку dist/css с именем libs.min.css///////////////////////////////////////////////////////////////////////////////////////////////////////
 function stylesLibs() {
 	return src([
-		'node_modules/normalize.css/normalize.css'
+		'node_modules/normalize.css/normalize.css',
+    'node_modules/swiper/swiper-bundle.css'
 	])
-		.pipe(scss({
-			outputStyle: 'compressed'
-		}))
+
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 5 version'],
+      cascade: false,
+      grid: true
+    }))
+    .pipe(cssmin())
 		.pipe(concat('libs.min.css'))
 		.pipe(dest('dist/css/'))
 		.pipe(browsersync.stream())
@@ -89,7 +95,8 @@ function stylesLibs() {
 //Собираем все js файлы подключаемых плагинов, конкатинируем их в 1 минифицированный файл js и закидываем его в папку dist/js с именем libs.min.js///////////////////////////////////////////////////////////////////////////////////////////////////////
 function scriptsLibs() {
 	return src([
-		'node_modules/jquery/dist/jquery.js'
+		'node_modules/jquery/dist/jquery.js',
+    'node_modules/swiper/swiper-bundle.js'
 	])
 		.pipe(uglify())
 		.pipe(concat('libs.min.js'))
