@@ -106,7 +106,6 @@ body {
   background-image: url("../img/bg-img.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: cover;
 }
 
 .title__bg {
@@ -257,9 +256,6 @@ body {
 .slider__item {
   height: 600px;
   max-width: 100%;
-  border-radius: 50px;
-  -webkit-box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.5);
   display: block;
   margin: 0 auto;
   -o-object-fit: cover;
