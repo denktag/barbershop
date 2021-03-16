@@ -1,4 +1,16 @@
 
+$(document).on("click", ".header__item-link", function(e) {
+	e.preventDefault();
+	let id  = $(this).attr('href');
+	let top = $(id).offset().top; // получаем координаты блока
+	$('body, html').animate({scrollTop: top}, 800); // плавно переходим к блоку
+});
+
+$(document).on("click", ".scroll-up", function(e) {
+	e.preventDefault();
+	$('body, html').animate({scrollTop: 0}, 800);
+});
+
 new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.button-next',

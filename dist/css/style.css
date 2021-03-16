@@ -81,8 +81,27 @@ body {
   padding: 20px 0;
 }
 
-.header__title {
-  font-size: 46px;
+.header__menu {
+  max-width: 400px;
+  width: 100%;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header__item {
+  list-style: none;
+}
+
+.header__item-link {
+  text-decoration: none;
+  color: #fff;
 }
 
 .header__phone {
@@ -400,6 +419,27 @@ body {
 .footer__link:hover {
   -webkit-box-shadow: 0 0 5px 1px #fff;
   box-shadow: 0 0 5px 1px #fff;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 100;
+  border-radius: 50%;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.scroll-up:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 @media (max-width: 1200px) {
