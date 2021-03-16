@@ -103,6 +103,7 @@ body {
   font-family: 'Marck Script', cursive;
   font-weight: 700;
   padding: 300px 0;
+  background-image: url("../img/bg-img.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
@@ -594,3 +595,5 @@ body {
     height: 300px;
   }
 }
+
+.webp .title { background-image: url(../img/bg-img.webp); }
