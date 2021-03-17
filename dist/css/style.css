@@ -107,8 +107,9 @@ body {
 }
 
 .header__menu {
-  max-width: 400px;
+  max-width: 550px;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .header__list {
@@ -128,9 +129,18 @@ body {
 .header__item-link {
   text-decoration: none;
   color: #fff;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.header__item-link:hover {
+  color: #ffd700;
 }
 
 .header__phone {
+  display: inline-block;
+  min-width: 170px;
   text-align: right;
   text-decoration: none;
   color: rgba(255, 255, 0, 0.7);
@@ -534,6 +544,14 @@ body {
     justify-content: space-around;
   }
 
+  .header__item-link {
+    font-size: 18px;
+  }
+
+  .header__link {
+    max-width: 100px;
+  }
+
   .adventages__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -717,10 +735,6 @@ body {
 @media (max-width: 576px) {
   .header__menu {
     top: 41px;
-  }
-
-  .header__link {
-    max-width: 100px;
   }
 
   .header__phone {
