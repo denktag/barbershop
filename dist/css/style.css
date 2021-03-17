@@ -406,6 +406,22 @@ body {
   letter-spacing: 1px;
 }
 
+.footer__phone {
+  font-size: 20px;
+  margin-bottom: 30px;
+  display: inline-block;
+  color: #ffd700;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.footer__phone:hover {
+  color: yellow;
+  text-shadow: 2px 2px 5px yellow;
+}
+
 .footer__map {
   margin-bottom: 50px;
 }
