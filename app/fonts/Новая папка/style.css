@@ -1,4 +1,14 @@
-@include font("icomoon", "icomoon", "400", "normal");
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?lwv5hh');
+  src:  url('fonts/icomoon.eot?lwv5hh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lwv5hh') format('truetype'),
+    url('fonts/icomoon.woff?lwv5hh') format('woff'),
+    url('fonts/icomoon.svg?lwv5hh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */

@@ -14,6 +14,14 @@
 		padding: 20px 0;
 	}
 
+	&__logo {
+		max-width: 100%;
+	}
+
+	&__burger {
+		display: none;
+	}
+
 	&__menu {
 		max-width: 400px;
 		width: 100%;
@@ -22,6 +30,7 @@
 	&__list {
 		display: flex;
 		justify-content: space-between;
+		margin: 0 30px;
 	}
 
 	&__item {
@@ -34,6 +43,7 @@
 	}
 
 	&__phone {
+		text-align: right;
 		text-decoration: none;
 		color: rgba(255, 255, 0, .7);
 		font-size: 16px;
@@ -46,17 +56,138 @@
 	}
 }
 
-@media (max-width: 380px) {
+@media (max-width: 992px) {
+	.header {
+		&__list {
+			justify-content: space-around;
+		}
+	}
+}
+
+@media (max-width: 768px) {
 	.header {
 		&__inner {
+			padding: 5px 0;
+		}
+
+		&__burger {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 20px;
+			margin-left: 15px;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				content: '';
+				background-color: #fff;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				transition: all .3s;
+			}
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+		}
+
+		& .active .header__burger-line {
+			transform: scale(0);
+		}
+
+		& .active::before {
+			transform: rotate(45deg);
+			top: 9px;
+		}
+
+		& .active::after {
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+
+		&__burger-line {
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 2px;
+			transition: all .3s;
+		}
+
+		&__menu {
+			max-width: 100%;
+			position: absolute;
+			z-index: 5;
+			top: 60px;
+			left: 0;
+			opacity: 0;
+			background-color: rgba(0, 0, 0, .9);
+			transition: all .5s;
+
+			&.active {
+				opacity: 1;
+			}
+		}
+
+		&__list {
+			margin: 0;
 			display: block;
 			text-align: center;
+			padding: 0 0 20px;
+		}
+
+		&__item {
+			
+			& + & {
+				margin-top: 20px;
+			}
+		}
+
+		&__item-link {
+			display: block;
+			max-width: 100%;
+			padding: 10px 0;
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header {
+		&__menu {
+			top: 41px;
+		}
+
+		&__link {
+			max-width: 100px;
 		}
 
 		&__phone {
-			display: block;
 			font-size: 14px;
-			margin-top: 20px;
+		}
+
+		&__item-link {
+			padding-right: 32px;
+		}
+	}
+}
+
+@media (max-width: 380px) {
+	.header {
+		&__link {
+			max-width: 80px;
+		}
+
+		&__phone {
+			font-size: 13px;
 		}
 	}
 }
@@ -519,28 +650,44 @@
 		justify-content: center;
 	}
 
-	&__link {
-		font-size: 45px;
-		color: #1E90FF;
-		background-color: #fff;
-		border-radius: 50%;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all .3s;
-
+	&__social-item {
 		& + & {
 			margin-left: 40px;
 		}
-
-		&:hover {
-			box-shadow: 0 0 5px 1px #fff;
-		}
 	}
 
-	.icon-facebook2 {
-		// padding-right: 5px;
+	&__link {
+		font-family: 'icomoon';
+		font-size: 30px;
+		border-radius: 50%;
+		background-color: #fff;
+		color: #0000ff;
+		padding: 10px;
+		text-decoration: none;
+		transition: all .8s;
+
+		&:hover {
+			background-color: #0000ff;
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.footer {
+		&__social {
+			display: block;
+		}
+
+		&__social-item {
+			display: inline-block;
+			width: 30%;
+			margin-bottom: 20px;
+
+			& + & {
+				margin-left: 0;
+			}
+		}
 	}
 }
 
@@ -564,18 +711,38 @@
 	bottom: 50px;
 	background: rgba(255, 255, 255, .1);
 	display: inline-block;
-	color: rgba(255, 255, 255, .3);
-	font-size: 16px;
-	line-height: 40px;
+	font-family: 'icomoon';
+	color: rgba(255, 255, 255, .2);
+	font-size: 30px;
 	text-align: center;
 	z-index: 100;
 	border-radius: 50%;
-	padding: 15px;
+	padding: 10px;
 	text-decoration: none;
+	transition: all .3s;
+
+	&::before {
+		content: "\ea32";
+	}
 
 	&:hover {
-		background: rgba(255, 255, 255, .2);
-		color: rgba(255, 255, 255, 1);
+		background: rgba(255, 255, 255, .3);
+		color: rgba(255, 255, 255, 2);
+	}
+}
+
+@media (max-width: 768px) {
+	.scroll-up {
+		right: 30px;
+		bottom: 30px;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	.scroll-up {
+		right: 20px;
+		bottom: 20px;
 	}
 }
 // scroll-up end
