@@ -23,8 +23,9 @@
 	}
 
 	&__menu {
-		max-width: 400px;
+		max-width: 550px;
 		width: 100%;
+		text-transform: uppercase;
 	}
 
 	&__list {
@@ -40,9 +41,16 @@
 	&__item-link {
 		text-decoration: none;
 		color: #fff;
+		transition: all .3s;
+
+		&:hover {
+			color: #ffd700;
+		}
 	}
 
 	&__phone {
+		display: inline-block;
+		min-width: 170px;
 		text-align: right;
 		text-decoration: none;
 		color: rgba(255, 255, 0, .7);
@@ -60,6 +68,14 @@
 	.header {
 		&__list {
 			justify-content: space-around;
+		}
+
+		&__item-link {
+			font-size: 18px;
+		}
+
+		&__link {
+			max-width: 100px;
 		}
 	}
 }
@@ -166,9 +182,7 @@
 			top: 41px;
 		}
 
-		&__link {
-			max-width: 100px;
-		}
+		
 
 		&__phone {
 			font-size: 14px;
