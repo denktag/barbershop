@@ -210,7 +210,7 @@ body {
 }
 
 .title__name {
-  font-family: 'Kurale', sans-serif;
+  font-family: 'Yeseva One', sans-serif;
   letter-spacing: 5px;
   display: block;
   text-align: right;
@@ -599,6 +599,9 @@ body {
     height: 20px;
     margin-left: 15px;
     cursor: pointer;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
   }
 
   .header__burger::before,
@@ -660,7 +663,7 @@ body {
     max-width: 100%;
     position: absolute;
     z-index: 5;
-    top: 60px;
+    top: 48px;
     left: 0;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -677,7 +680,7 @@ body {
     margin: 0;
     display: block;
     text-align: center;
-    padding: 0 0 20px;
+    padding: 20px 0;
   }
 
   .header__item + .header__item {
@@ -689,6 +692,12 @@ body {
     max-width: 100%;
     padding: 10px 0;
     color: #fff;
+  }
+
+  .header__phone {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 
   .title {
@@ -734,15 +743,11 @@ body {
 
 @media (max-width: 576px) {
   .header__menu {
-    top: 41px;
+    top: 37px;
   }
 
   .header__phone {
     font-size: 14px;
-  }
-
-  .header__item-link {
-    padding-right: 32px;
   }
 
   .title {
@@ -792,12 +797,17 @@ body {
 }
 
 @media (max-width: 380px) {
+  .header__logo {
+    max-width: 90%;
+  }
+
   .header__link {
     max-width: 80px;
   }
 
   .header__phone {
     font-size: 13px;
+    min-width: auto;
   }
 
   .title {
